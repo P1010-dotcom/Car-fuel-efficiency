@@ -9,12 +9,12 @@ int main() {
     int n, i, j;
     struct Car temp;
 
-    printf("Enter the number of cars: ");
+printf("Enter the number of cars: ");
     scanf("%d", &n);
 
-    struct Car car[n];
+struct Car car[n];
 
-    for (i = 0; i < n; i++) {
+for (i = 0; i < n; i++) {
         printf("\nEnter details for Car %d:\n", i + 1);
         printf("Car ID: ");
         scanf("%d", &car[i].id);
@@ -26,7 +26,7 @@ int main() {
         scanf("%f", &car[i].mileage);
     }
 
-    for (i = 0; i < n - 1; i++) {
+for (i = 0; i < n - 1; i++) {
         for (j = 0; j < n - i - 1; j++) {
             if (car[j].mileage < car[j + 1].mileage) {
                 temp = car[j];
@@ -36,13 +36,13 @@ int main() {
         }
     }
 
-    printf("\n----------- CAR FUEL EFFICIENCY MANAGEMENT SYSTEM -----------\n");
+printf("\n----------- CAR FUEL EFFICIENCY MANAGEMENT SYSTEM -----------\n");
     printf("Car Details Sorted by Mileage (Highest to Lowest):\n\n");
     printf("ID\tBrand\t\tModel\t\tMileage (km/l)\n");
 
-    for (i = 0; i < n; i++) {
+for (i = 0; i < n; i++) {
         printf("%d\t%-10s\t%-10s\t%.2f\n", car[i].id, car[i].brand, car[i].name, car[i].mileage);
     }
 
-    return 0;
+return 0;
 }
